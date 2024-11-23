@@ -199,7 +199,7 @@ Citizen.CreateThread(function()
     end
 end)
 
--
+
 RegisterNetEvent('baseevents:leftVehicle')
 AddEventHandler('baseevents:leftVehicle', function()
     SendNUIMessage({ action = "hideUI" })

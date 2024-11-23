@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Orbitron', sans-serif;
+    background: transparent; /* Ensure body doesn't add unnecessary elements */
+}
+
+#engine-heat-ui {
+    position: absolute;
+    bottom: 10px;
+    right: 10px; /* Change from left to right */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centering content within box */
+    color: white;
+    border: none; /* Remove border */
+    background-color: transparent; /* Make background transparent */
+    padding: 5px; /* Reduce padding */
+    border-radius: 10px;
+    width: fit-content; /* Ensuring the box fits content */
+    height: fit-content; /* Ensuring the box fits content */
+}
+
+#engine-icon {
+    width: 30px; /* Reduce size */
+    height: 30px; /* Reduce size */
+}
+
+#engine-numbers {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px; /* Reduce margin */
+}
+
+.number-display {
+    font-size: 15px; /* Reduce font size */
+    font-weight: bold;
+    margin: 2px 0;
+    color: #000000; /* Simple black color */
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.blink {
+    animation: blink 1s infinite;
+}
+
+/* Notification styles */
+.notification {
+    display: none;
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    z-index: 1000;
+    animation: fade-in-out 3s;
+}
+
+@keyframes fade-in-out {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { opacity: 0; }
+}
